@@ -1,20 +1,22 @@
-pipeline {
+pipeline { 
     agent any
-
     stages {
-        stage('Clone git') {
+        stage('Clone Git') {
             steps {
-                // echo "Checkout the source code from the Git repository"
-                git 'https://github.com/Shahakshar/jenkins.git'
+                git 'https://github.com/BThangaraju/Jenkins.git'
             }
         }
-
-        stage('Build code') {
+        stage('Build Code') {
             steps {
-                // echo "Execute build commands or scripts"
-                //sh 'your-build-command-or-script.sh'
-                python3 helloWorld.py
+                sh "chmod u+x Prog1.py"
+                sh "./Prog1.py"
             }
         }
-    }
-}  
+     stage('Test Code') {
+            steps {
+                sh "chmod u+x Test.py"
+                sh "./Test.py"
+            }
+        }
+    } 
+}
