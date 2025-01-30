@@ -14,6 +14,10 @@ pipeline {
                 sh "pwd"     // Print working directory
             }
         }
-        
+        stage('Run Python Script') {
+            steps {
+                sh "python3 helloworld.py"
+            }
+        }
     } 
 }
