@@ -8,14 +8,14 @@ pipeline {
         }
         stage('Check Files') {
             steps {
-                sh "ls -l"   // List files in workspace
-                sh "pwd"     // Print working directory
+                sh "ls -l"   
+                sh "pwd"     
             }
         }
         stage('Run Python Script') {
             steps {
-                sh "python3 helloworld.py" // this fine
-                sh "python3 Prog1.py" // this what it is
+                sh "python3 helloworld.py" 
+                sh "python3 Prog1.py" 
             }
         }
     } 
