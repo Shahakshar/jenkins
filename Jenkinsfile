@@ -10,7 +10,10 @@ pipeline {
             steps {
                 sh "chmod u+x Prog1.py"
                 sh "./Prog1.py"
-                sh "chmod u+x helloWorld.py"
+            }
+        }
+        stage('Run Python Script') {
+            steps {
                 sh "python3 helloWorld.py"
             }
         }
