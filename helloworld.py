@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("this is me akshar")
+def print():
+    print("this is me akshar")
