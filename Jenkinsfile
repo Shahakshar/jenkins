@@ -8,12 +8,12 @@ pipeline {
                 sh "ls -l"     // Check if files were cloned
             }
         }
-        // stage('Build Code') {
-        //     steps {
-        //         sh "chmod u+x helloworld.py"
-        //         sh "./helloworld.py"
-        //     }
-        // }
+        stage('Check Files') {
+            steps {
+                sh "ls -l"   // List files in workspace
+                sh "pwd"     // Print working directory
+            }
+        }
         
     } 
 }
