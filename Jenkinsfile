@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('clone git') {
+        stage('Clone git') {
             steps {
                 // echo "Checkout the source code from the Git repository"
                 git 'https://github.com/Shahakshar/jenkins.git'
@@ -17,10 +17,4 @@ pipeline {
             }
         }
     }
-
 }  
-stage('Ansible Deployment') {
-             steps {
-                    ansible-playbook installation: 'Ansible', playbook: 'deploy-playbook.yml'
-             }
-         }
