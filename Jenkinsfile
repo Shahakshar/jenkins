@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh "chmod u+x Prog1.py"
                 sh "./Prog1.py"
-                python3 helloWorld.py
+                python3 "helloWorld.py"
             }
         }
     } 
